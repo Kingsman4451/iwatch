@@ -1,0 +1,9 @@
+/* LOGO */
+.logo{
+  display: inline-block;
+  &__img{
+    display: block;
+    width: 25px;
+    height: 60px;
+  }
+}
