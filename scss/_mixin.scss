@@ -3,3 +3,8 @@
   align-items: $ai;
   justify-content: $jc;
 }
+@mixin list-no-style(){
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
