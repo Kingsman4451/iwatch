@@ -1,0 +1,35 @@
+.hero{
+  background-image: url("../../img/watches.jpg");
+  background-repeat: no-repeat;
+  background-position: calc(50% + 765px) 20px;
+  background-size: 730px;
+  padding-top: 150px;
+  padding-bottom: 250px;
+  &__inner{
+  width: 430px;
+  }
+  &__heading{
+    font-size: 42px;
+    color: $dark-grey;
+    margin: 0;
+    margin-bottom: 58px;
+  }
+  &__text{
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+    color: $light-grey;
+    margin: 0;
+    margin-left: 33px;
+    margin-bottom: 50px;
+    &:before{
+      display: block;
+      position: absolute;
+      left: -35px;
+      width: 2px;
+      height: 110px;
+      background-color: $light-grey;
+      content: "";
+    }
+  }
+}
