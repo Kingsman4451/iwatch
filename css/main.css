@@ -394,6 +394,12 @@ body {
   text-transform: uppercase;
   padding: 12px 20px;
   border: none;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #d0514b;
 }
 
 /* LOGO */
@@ -630,4 +636,51 @@ body {
 
 .offers__link:hover::before {
   width: 40px;
+}
+
+/* SERVICES */
+.services {
+  margin-top: 100px;
+}
+
+.services__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services__content {
+  width: 420px;
+}
+
+.services__heading {
+  font-size: 46px;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.services__text {
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9F9F9E;
+  margin: 0;
+  margin-left: 33px;
+  margin-bottom: 40px;
+}
+
+.services__text:before {
+  display: block;
+  position: absolute;
+  left: -35px;
+  width: 2px;
+  height: 90px;
+  background-color: #9F9F9E;
+  content: "";
 }
