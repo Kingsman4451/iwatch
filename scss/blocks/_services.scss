@@ -1,0 +1,33 @@
+/* SERVICES */
+.services{
+  margin-top: 100px;
+  &__inner{
+    @include flex(center, space-between)
+  }
+  &__content{
+    width: 420px;
+  }
+  &__heading{
+    font-size: 46px;
+    margin: 0;
+    margin-bottom: 60px;
+  }
+  &__text{
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+    color: $light-grey;
+    margin: 0;
+    margin-left: 33px;
+    margin-bottom: 40px;
+    &:before{
+      display: block;
+      position: absolute;
+      left: -35px;
+      width: 2px;
+      height: 90px;
+      background-color: $light-grey;
+      content: "";
+    }
+  }
+}
