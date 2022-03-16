@@ -7,6 +7,15 @@
   &__right{
     @include flex(center, space-between)
   }
+  &__left{
+    .fa-bars{
+      visibility: hidden;
+    }
+    .fa-xmark{
+      visibility: hidden;
+    }
+  }
+  
   &__input{
     font-weight: 500;
     width: 165px;
@@ -15,6 +24,59 @@
     outline: none;
     &:hover{
     border-bottom: 2px solid $dark-grey;
+    }
+  }
+}
+
+
+@include breakpoint-down(575px){
+  .header{
+    position: fixed;
+    z-index: 10;
+    background-color: #fff;
+    width: 100%;
+    padding-top: 0;
+    box-shadow: -3px 4px 12px -8px rgba(34, 60, 80, 0.65);
+    .container{
+      padding: 0;
+    }
+    &__inner{
+      position: relative;
+      @include flex(flex-start, space-between);
+      flex-direction: column;
+    }
+    &__left{
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      background-color: #ffffff;
+      padding: 0 20px;
+      @include flex(center, space-between);
+      .menu{
+        font-size: 20px;
+        visibility: visible;
+        display: block;
+      }
+      .cross{
+        font-size: 20px;
+        visibility: visible;
+        display: none;
+      }
+    }
+    &__right{
+      position: absolute;
+      top: -130px;
+      width: 100%;
+      @include flex(flex-start, space-between);
+      flex-direction: column;
+      background-color: #ffffff;
+      transition: top 0.5s ease;
+      padding: 0 20px;
+      padding-bottom: 20px;
+      box-shadow: -3px 4px 12px -8px rgba(34, 60, 80, 0.65);
+    }
+    &__input{
+      margin-top: 30px;
     }
   }
 }
