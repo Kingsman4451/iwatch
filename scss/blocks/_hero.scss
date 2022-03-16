@@ -7,7 +7,7 @@
   padding-bottom: 250px;
   border-bottom: 0.2px solid $light-grey;
   &__inner{
-  width: 430px;
+  max-width: 430px;
   }
   &__heading{
     font-size: 42px;
@@ -31,6 +31,46 @@
       height: 110px;
       background-color: $light-grey;
       content: "";
+    }
+  }
+}
+
+
+
+@include breakpoint-down(1200px){
+  .hero{
+    background-position: calc(50% + 480px) 20px;
+  }
+}
+
+@include breakpoint-down(768px){
+  .hero{
+    background-position: calc(50% + 520px) 150px;
+  }
+}
+
+@include breakpoint-down(575px){
+  .hero{
+    padding-top: 180px;
+    padding-bottom: 350px;
+    background-position: calc(50% + 200px) bottom;
+    background-size: 400px;
+  }
+}
+@include breakpoint-down(420px){
+  .hero{
+    background-position: calc(50% + 150px) calc(100% + 60px);
+    &__inner{
+      text-align: center;
+    }
+    &__heading{
+      margin-bottom: 40px;
+    }
+    &__text{
+      margin-left: 0;
+      &::before{
+        display: none;
+      }
     }
   }
 }
