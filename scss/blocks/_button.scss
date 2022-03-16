@@ -7,4 +7,8 @@
   text-transform: uppercase;
   padding: 12px 20px;
   border: none;
+  transition: background-color 0.3s ease;
+  &:hover{
+    background-color: rgb(208, 81, 75);
+  }
 }
