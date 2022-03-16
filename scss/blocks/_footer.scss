@@ -1,15 +1,20 @@
 /* FOOTER */
 .footer{
   @include flex(center, flex-end);
+  width: 100%;
   height: 800px;
   margin-top: 50px;
   background-image: url("../../img/runners.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
+  .container{
+    @include flex(center, flex-end);
+    width: 100%
+  }
   &__content{
-    width: 430px;
-    margin-left: 545px;
+    max-width: 430px;
+    // margin-left: 545px;
   }
   &__heading{
     font-size: 44px;
@@ -33,6 +38,37 @@
       height: 110px;
       background-color: #ffffff;
       content: "";
+    }
+  }
+}
+
+
+
+@include breakpoint-down(1024px){
+  .footer{
+    background-position: center;
+    margin-top: 100px;
+  }
+}
+
+@include breakpoint-down(475px){
+  .footer{
+    margin-top: 100px;
+  @include flex(center, center);
+    &__content{
+      margin-left: 0;
+      max-width: 430px;
+      text-align: center;
+    }
+    &__heading{
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    &__text{
+      margin-left: 0;
+      &::before{
+        display: none;
+      }
     }
   }
 }
