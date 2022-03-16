@@ -662,6 +662,7 @@ body {
 .services__heading {
   font-size: 46px;
   margin: 0;
+  color: #333333;
   margin-bottom: 60px;
 }
 
@@ -682,5 +683,56 @@ body {
   width: 2px;
   height: 90px;
   background-color: #9F9F9E;
+  content: "";
+}
+
+/* FOOTER */
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 800px;
+  margin-top: 50px;
+  background-image: url("../../img/runners.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.footer__content {
+  width: 430px;
+  margin-left: 545px;
+}
+
+.footer__heading {
+  font-size: 44px;
+  margin: 0;
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+.footer__text {
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  margin: 0;
+  margin-left: 33px;
+  margin-bottom: 50px;
+}
+
+.footer__text:before {
+  display: block;
+  position: absolute;
+  left: -35px;
+  width: 2px;
+  height: 110px;
+  background-color: #ffffff;
   content: "";
 }
