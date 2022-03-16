@@ -6,7 +6,7 @@
     @include flex(flex-start, space-between)
   }
   &__item{
-    width: 291px;
+    max-width: 291px;
   }
   
   &__heading{
@@ -21,6 +21,8 @@
     line-height: 27px;
     color: $dark-grey;
     font-weight: 500;
+    margin: 0;
+    margin-bottom: 15px;
   }
   &__span{
     display: block;
@@ -69,5 +71,27 @@
     &:hover::before{
       width: 40px;
     }
+  }
+}
+
+
+
+@include breakpoint-down(992px){
+  .offers{
+    padding-bottom: 40px;
+    &__list{
+      @include flex(center, space-between);
+      flex-direction: column;
+    }
+    &__item{
+      max-width: 700px;
+    }
+    &__item ~ &__item{
+      margin-top: 50px;
+    }
+    &__heading{
+      margin-bottom: 20px;
+    }
+    
   }
 }
