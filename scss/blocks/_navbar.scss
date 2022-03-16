@@ -32,3 +32,13 @@
     color: $dark-grey;
   }
 }
+
+
+@include breakpoint-down(575px){
+  .navbar{
+    &__list{
+    @include flex(flex-start, center);
+      flex-direction: column;
+    }
+  }
+}
