@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iwatch</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
@@ -12,10 +13,14 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <a href="index.html" class="logo">
-          <img class="logo__img" src="./img/logo.svg" alt="logo" width="25px" height="60">
-        </a>
-        <div class="header__right">
+        <div class="header__left">
+          <a href="index.html" class="logo">
+            <img class="logo__img" src="./img/logo.svg" alt="logo" width="25px" height="60">
+          </a>
+          <i class="fa-solid fa-bars menu"></i>
+          <i class="fa-solid fa-xmark cross"></i>
+        </div>
+        <div class="header__right" id="navbar">
           <nav class="navbar">
             <ul class="navbar__list">
               <li class="navbar__item">
@@ -35,23 +40,24 @@
     </div>
   </header>
   <!-- ======================= /HEADER ======================= -->
+  
   <main>
-  <!-- ======================= HERO ======================= -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero__inner">
-          <h2 class="hero__heading">Freedom calls.</h2>
-          <p class="hero__text">
-            Answer a call from your surfboard. Ask Siri to send a message. Stream your favorite songs on your run. And do it all while leaving your phone behind. Introducing Apple Watch Series 3 with cellular. Now you have the freedom to go with just your watch.
-          </p>
-          <button class="button">watch the keynote</button>
+    <!-- ======================= HERO ======================= -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <h2 class="hero__heading">Freedom calls.</h2>
+            <p class="hero__text">
+              Answer a call from your surfboard. Ask Siri to send a message. Stream your favorite songs on your run. And do it all while leaving your phone behind. Introducing Apple Watch Series 3 with cellular. Now you have the freedom to go with just your watch.
+            </p>
+            <button class="button">watch the keynote</button>
+          </div>
         </div>
-      </div>
-    </section>
-  <!-- ======================= /HERO ======================= -->
+      </section>
+    <!-- ======================= /HERO ======================= -->
 
-  <!-- ======================= OFFERS ======================= -->
-  <section class="offers">
+    <!-- ======================= ABOUT ======================= -->
+  <section id="about" class="offers">
     <div class="container">
       <ul class="offers__list">
         <li class="offers__item">
@@ -84,10 +90,10 @@
       </ul>
     </div>
   </section>
-  <!-- ======================= /OFFERS ======================= -->
+  <!-- ======================= /ABOUT ======================= -->
 
   <!-- ======================= OFFERS ======================= -->
-  <section class="services">
+  <section id="offers" class="services">
     <div class="container">
       <div class="services__inner">
         <div class="services__content">
@@ -99,14 +105,16 @@
           </p>
           <button class="button">buy now</button>
         </div>
-        <img src="./img/preview.jpg" alt="watch" class="services__img" width="450" height="650">
+        <div class="services__img">
+          <img src="./img/preview.jpg" alt="watch" width="450" height="650">
+        </div>
       </div>
     </div>
   </section>
   <!-- ======================= /OFFERS ======================= -->
 
   <!-- ======================= FOOTER ======================= -->
-  <footer class="footer">
+  <footer id="services" class="footer">
     <div class="container">
       <div class="footer__content">
         <h2 class="footer__heading">
@@ -120,6 +128,26 @@
     </div>
   </footer>
   <!-- ======================= /FOOTER ======================= -->
-  </main>
+    </main>
+  
+
+
+
+  <script>
+    var openMenu = document.querySelector(".fa-bars");
+    var hideMenu = document.querySelector(".fa-xmark");
+
+    openMenu.addEventListener("click", () => {
+      document.getElementById("navbar").style.top = "50px"
+      document.querySelector(".fa-bars").style.display = "none"
+      document.querySelector(".fa-xmark").style.display = "block"
+    })
+
+    hideMenu.addEventListener("click", () => {
+      document.getElementById("navbar").style.top = "-130px"
+      document.querySelector(".fa-bars").style.display = "block"
+      document.querySelector(".fa-xmark").style.display = "none"
+    })
+  </script>
 </body>
 </html>
