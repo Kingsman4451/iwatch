@@ -413,6 +413,24 @@ body {
   height: 60px;
 }
 
+.form__input {
+  font-weight: 500;
+  width: 165px;
+  border: none;
+  border-bottom: 2px solid #9F9F9E;
+  outline: none;
+}
+
+.form__input:hover {
+  border-bottom: 2px solid #333333;
+}
+
+@media only screen and (max-width: 575px) {
+  .form__input {
+    margin-top: 30px;
+  }
+}
+
 /* HEADER */
 .header {
   padding-top: 20px;
@@ -448,18 +466,6 @@ body {
 
 .header__left .fa-xmark {
   visibility: hidden;
-}
-
-.header__input {
-  font-weight: 500;
-  width: 165px;
-  border: none;
-  border-bottom: 2px solid #9F9F9E;
-  outline: none;
-}
-
-.header__input:hover {
-  border-bottom: 2px solid #333333;
 }
 
 @media only screen and (max-width: 575px) {
@@ -541,9 +547,6 @@ body {
     padding-bottom: 20px;
     -webkit-box-shadow: -3px 4px 12px -8px rgba(34, 60, 80, 0.65);
             box-shadow: -3px 4px 12px -8px rgba(34, 60, 80, 0.65);
-  }
-  .header__input {
-    margin-top: 30px;
   }
 }
 
